@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<!--
+
+  Extraer texto de una imagen  (OCR)
+  con JavaScript y Tesseract
+
+  @author parzibyte
+  Visita: parzibyte.me/blog
+  
+  Plantilla de Bootstrap tomada de: 
+  https://parzibyte.me/blog/2019/05/09/plantilla-inicial-bootstrap-4-starter-template/
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Conversor de imagen a texto - Extraer texto de imagen utilizando Tesseract OCR (reconocimiento óptico de caracteres)">
+    <meta name="author" content="Parzibyte">
+    <title>Conversor de imagen a texto - Extraer texto de imagen</title>
+    <!-- Cargar el CSS de Bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Cargar estilos propios -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Definición del menú -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" target="_blank" href="//parzibyte.me/blog">OCR con JavaScript</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#miNavbar" aria-controls="miNavbar" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+    </nav>
+    <!-- Termina la definición del menú -->
+    <main role="main" class="container">
+        <div class="row">
+            <!-- Aquí pon las col-x necesarias, comienza tu contenido, etcétera -->
+            <div class="col-12">
+                <h1>Reconocimiento de texto en imágenes</h1>
+                <a href="//parzibyte.me/blog" target="_blank">By Parzibyte</a> |
+                <a href="#" target="_blank">Ver código fuente</a>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>Selección de imagen</h3>
+                <img class="img-fluid" id="imagenPrevisualizacion">
+                <div class="custom-file">
+                    <input id="archivo" type="file" class="custom-file-input">
+                    <label class="custom-file-label" for="archivo">Selecciona una imagen</label>
+                </div>
+                <br><br>
+                <button id="btnDetectar" class="btn btn-success">Detectar</button>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>Resultados</h3>
+                <p id="estado"></p>
+            </div>
+
+        </div>
+    </main>
+    <!-- Cargar jQuery y librerías JS necesarias. Si solo quieres el diseño, no las cargues -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src='https://unpkg.com/tesseract.js@2.0.0-alpha.7/dist/tesseract.min.js'></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
